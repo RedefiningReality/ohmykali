@@ -37,7 +37,7 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `work` ⇒ cd to your default working directory
 - `scripts` ⇒ cd to your scripts directory
 - `down` ⇒ move everything from your downloads folder to your current working directory
-- `vpn` ⇒ add VPN from OpenVPN file to NetworkManager's list of VPN connections
+- `vpn` ⇒ add VPN from OpenVPN file to NetworkManager's list of VPN connections (you can connect through the UI rather than running the `openvpn` command)
 - `scan` ⇒ that one actually useful nmap service scan you run every time
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
@@ -47,7 +47,7 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - `smb` ⇒ SMB server for common directories with copy and pastables for the target
 
 ### Examples
-- `vpn TryHackMe.ovpn` ⇒ add TryHackMe to your list of VPNs
+- `vpn TryHackMe.ovpn` ⇒ add TryHackMe to your list of VPN connections
 - `scan -oN file 192.168.1.5` ⇒ scan 192.168.1.5, save output to file
 - `box academy 192.168.1.5` ⇒ add academy to /etc/hosts and create academy environment variable
   - in the current terminal session, you can use `$academy` to directly reference academy's IP (192.168.1.5)
