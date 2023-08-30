@@ -37,8 +37,8 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `work` ⇒ cd to your default working directory
 - `scripts` ⇒ cd to your scripts directory
 - `down` ⇒ move everything from your downloads folder to your current working directory
-- `vpn` ⇒ add VPN from OpenVPN file to NetworkManager's list of VPN connections
-  - you can connect through the UI rather than running the `openvpn` command
+- `vpn` ⇒ add VPN connection from OpenVPN (.ovpn) file to NetworkManager's list of VPN connections
+  - allows you to connect through the UI rather than running the `openvpn` command
 - `scan` ⇒ that one actually useful nmap service scan you run every time
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
