@@ -61,5 +61,5 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 ---
 - `smb windows name` ⇒ serve your Windows scripts directory via SMB with share name "name"
 - `smb windows` ⇒ serve your Windows scripts directory via SMB with share name "share"
-- `smb name` ⇒ serve your current working directory via SMB with share name "name"
+- `smb john` ⇒ serve your current working directory via SMB with share name "john"
 - `smb` ⇒ serve your current working directory via SMB with share name "share"
