@@ -41,8 +41,8 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `scan` ⇒ that one actually useful nmap service scan you run every time
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
-- `serve` ⇒ HTTP server for common directories
-- `smb` ⇒ SMB server for common directories
+- `serve` ⇒ HTTP server for common directories with copy and pastables for the target
+- `smb` ⇒ SMB server for common directories with copy and pastables for the target
 
 ### Examples
 - `vpn TryHackMe.ovpn` ⇒ add TryHackMe to your list of VPNs
