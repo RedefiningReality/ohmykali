@@ -1,5 +1,3 @@
-export EDITOR=nano
-
 work_dir="/root/shared/workspace"
 scripts_dir="/root/shared/scripts"
 scripts_windows="/root/shared/scripts/windows"
