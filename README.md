@@ -1,7 +1,7 @@
 # ohmykali
 The terminal plugin to ease your offensive security workflow.
 
-ohmykali + pimpmykali = superior Kali Linux :)
+ohmykali + pimpmykali = superior Kali Linux :D
 
 ## Installation
 ### Dependencies
