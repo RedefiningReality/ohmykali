@@ -49,14 +49,12 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `scan -oN file 192.168.1.5` ⇒ scan 192.168.1.5, save output to file
 - `box academy 192.168.1.5` ⇒ add academy to /etc/hosts and create academy environment variable
   - in the current terminal session, you can use `$academy` to directly reference academy's IP
-
-
+---
 - `serve linux 8000` ⇒ serve your Linux scripts directory via HTTP on port 8000
 - `serve linux` ⇒ serve your Linux scripts directory via HTTP on port 80
 - `serve 443` ⇒ serve your current working directory via HTTP on port 443
 - `serve` ⇒ serve your current working directory via HTTP on port 80
-
-
+---
 - `smb windows name` ⇒ serve your Windows scripts directory via SMB with share name "name"
 - `smb windows` ⇒ serve your Windows scripts directory via SMB with share name "share"
 - `smb name` ⇒ serve your current working directory via SMB with share name "name"
