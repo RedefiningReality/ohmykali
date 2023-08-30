@@ -19,7 +19,7 @@ This is the simplest kind of installation and it works even if you are using a p
 ```zsh
 git clone https://github.com/RedefiningReality/ohmykali.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/kali
 ```
-1. In `~/.zshrc`, add this plugin to your plugins list:
+2. In `~/.zshrc`, add this plugin to your plugins list:
 ```zsh
 plugins=(... kali)
 ```
