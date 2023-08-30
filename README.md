@@ -41,6 +41,8 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `scan` ⇒ that one actually useful nmap service scan you run every time
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
+
+Be sure you're connected to a VPN (automatically detects IP) when using the following:
 - `serve` ⇒ HTTP server for common directories with copy and pastables for the target
 - `smb` ⇒ SMB server for common directories with copy and pastables for the target
 
