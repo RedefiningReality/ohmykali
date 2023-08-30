@@ -40,6 +40,7 @@ scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
 - `vpn` ⇒ add VPN connection from OpenVPN (.ovpn) file to NetworkManager's list of VPN connections
   - allows you to connect through the UI rather than running the `openvpn` command
 - `scan` ⇒ that one actually useful nmap service scan you run every time
+  - also check out the ohmyzsh bulit-in nmap plugin :)
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
 
