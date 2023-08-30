@@ -23,10 +23,20 @@ git clone https://github.com/RedefiningReality/ohmykali.git ${ZSH_CUSTOM:-$HOME/
 2. In `~/.zshrc`, add this plugin to your plugins list: `plugins=(... kali)`
 
 ## Usage
+Don't forget to edit the following lines at the beginning of `kali.plugin.zsh` to your liking:
+```zsh
+work_dir="/root/shared/workspace" # default working directory
+scripts_dir="/root/shared/scripts" # default scripts directory
+scripts_windows="/root/shared/scripts/windows" # default Windows scripts directory
+scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
+```
 
 ### Commands
 `box`, `rev`, `serve`, and `smb` have help screens you can access with the `-h` flag
 
+- `work` ⇒ cd to your default working directory
+- `scripts` ⇒ cd to your scripts directory
+- `down` ⇒ move everything from your downloads folder to the current directory
 - `vpn` ⇒ add VPN from OpenVPN file to your list of VPNs
 - `scan` ⇒ that one actually useful nmap service scan you run every time
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
