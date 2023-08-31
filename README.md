@@ -60,9 +60,9 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - `serve` ⇒ serve your current working directory via HTTP on port 80
 ---
 - `smb windows name` ⇒ serve your Windows scripts directory via SMB with share name "name"
-- `smb windows` ⇒ serve your Windows scripts directory via SMB with share name "share"
+- `smb windows` ⇒ serve your Windows scripts directory via SMB with default share name "share"
 - `smb john` ⇒ serve your current working directory via SMB with share name "john"
-- `smb` ⇒ serve your current working directory via SMB with share name "share"
+- `smb` ⇒ serve your current working directory via SMB with default share name "share"
 
 ## Other Plugins I Use
 *unrelated to this, but might be helpful*
