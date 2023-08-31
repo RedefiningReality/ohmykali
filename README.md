@@ -55,9 +55,9 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
   - in the current terminal session, you can use `$academy` to directly reference academy's IP (192.168.1.5)
 ---
 - `serve linux 8000` ⇒ serve your Linux scripts directory via HTTP on port 8000
-- `serve linux` ⇒ serve your Linux scripts directory via HTTP on port 80
+- `serve linux` ⇒ serve your Linux scripts directory via HTTP on default port 80
 - `serve 443` ⇒ serve your current working directory via HTTP on port 443
-- `serve` ⇒ serve your current working directory via HTTP on port 80
+- `serve` ⇒ serve your current working directory via HTTP on default port 80
 ---
 - `smb windows name` ⇒ serve your Windows scripts directory via SMB with share name "name"
 - `smb windows` ⇒ serve your Windows scripts directory via SMB with default share name "share"
