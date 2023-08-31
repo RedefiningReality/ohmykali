@@ -8,7 +8,7 @@ alias scripts="cd $scripts_dir"
 alias down="mv ~/Downloads/* ."
 work
 
-alias vpn="sudo nmcli connection import type openvpn file"
+alias vpn="nmcli connection import type openvpn file"
 alias scan="sudo nmap -T4 -p- -sC -sV -Pn -vv"
 
 box() {
