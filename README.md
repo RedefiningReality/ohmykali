@@ -25,10 +25,10 @@ git clone https://github.com/RedefiningReality/ohmykali.git ${ZSH_CUSTOM:-$HOME/
 ## Usage
 Don't forget to edit the following lines at the beginning of `kali.plugin.zsh` to your liking:
 ```zsh
-work_dir="/root/shared/workspace" # default working directory
-scripts_dir="/root/shared/scripts" # default scripts directory
-scripts_windows="/root/shared/scripts/windows" # default Windows scripts directory
-scripts_linux="/root/shared/scripts/linux" # default Linux scripts directory
+work_dir="/home/kali/shared/workspace" # default working directory
+scripts_dir="/home/kali/shared/scripts" # default scripts directory
+scripts_windows="/home/kali/shared/scripts/windows" # default Windows scripts directory
+scripts_linux="/home/kali/shared/scripts/linux" # default Linux scripts directory
 ```
 
 ### Commands
