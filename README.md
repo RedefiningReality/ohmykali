@@ -63,3 +63,20 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - `smb windows` ⇒ serve your Windows scripts directory via SMB with share name "share"
 - `smb john` ⇒ serve your current working directory via SMB with share name "john"
 - `smb` ⇒ serve your current working directory via SMB with share name "share"
+
+## Other Plugins I Use
+*unrelated to this, but might be helpful*
+- colorize
+- cd-ls
+- debian
+- fasd
+- git
+- history
+- nmap
+- pip
+- safe-paste
+- systemadmin
+- systemd
+- zsh-autocomplete
+- zsh-autosuggestions
+- zsh-syntax-highlighting
