@@ -1,7 +1,7 @@
-work_dir="/home/kali/shared/workspace"
-scripts_dir="/home/kali/shared/scripts"
-scripts_windows="/home/kali/shared/scripts/windows"
-scripts_linux="/home/kali/shared/scripts/linux"
+work_dir="/home/$USER/shared/workspace"
+scripts_dir="/home/$USER/shared/scripts"
+scripts_windows="/home/$USER/shared/scripts/windows"
+scripts_linux="/home/$USER/shared/scripts/linux"
 
 alias work="cd $work_dir"
 alias scripts="cd $scripts_dir"
