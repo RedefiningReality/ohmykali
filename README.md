@@ -69,6 +69,7 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - colorize
 - cd-ls
 - debian
+- extract
 - fasd
 - git
 - history
