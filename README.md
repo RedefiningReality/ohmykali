@@ -9,8 +9,7 @@ ohmykali + pimpmykali = superior Kali Linux :D
 
 ### Manual
 ```zsh
-git clone https://github.com/RedefiningReality/ohmykali ~/.ohmykali
-echo 'source ~/.ohmykali/kali.plugin.zsh' >>~/.zshrc
+git clone https://github.com/RedefiningReality/ohmykali ~/.ohmykali && echo 'source ~/.ohmykali/kali.plugin.zsh' >>~/.zshrc
 ```
 
 This is the simplest kind of installation and it works even if you are using a plugin manager.
