@@ -1,10 +1,10 @@
 work_dir="/home/$USER/shared/workspace"
-scripts_dir="/home/$USER/shared/scripts"
 scripts_windows="/home/$USER/shared/scripts/windows"
 scripts_linux="/home/$USER/shared/scripts/linux"
 
 alias work="cd $work_dir"
-alias scripts="cd $scripts_dir"
+alias win="cd $scripts_windows"
+alias lin="cd $scripts_linux"
 alias down="mv ~/Downloads/* ."
 work
 
@@ -40,7 +40,7 @@ EOF
   echo Starting netcat listener
   echo "# python -c 'import pty;pty.spawn(\"/bin/bash\")'"
   echo "# python3 -c 'import pty;pty.spawn(\"/bin/bash\")'"
-  sudo rlwrap -cAr nc -nvlp $1
+  rlwrap -cAr nc -nvlp $1
 }
 
 serve() {
@@ -87,7 +87,7 @@ EOF
   fi
 
   ls "$dir"
-  sudo python3 -m http.server $port --directory "$dir"
+  python3 -m http.server $port --directory "$dir"
 }
 
 smb() {
@@ -125,5 +125,5 @@ EOF
   echo "# net use R: \\\\\\$ip\\$share"
   
   ls "$dir"
-  sudo impacket-smbserver "$share" "$dir" -smb2support
+  impacket-smbserver "$share" "$dir" -smb2support
 }
