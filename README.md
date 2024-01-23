@@ -67,6 +67,7 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 The `serve`, `smb`, and `rev` commands do *not* listen as root (no sudo) for the following reasons:
 - It's generally not a good idea to expose services running as root
 - Having to type in your sudo password is annoying
+
 However, you can't bind to privileged ports (usually <1024) without root privileges, which means you wouldn't be able to start the SMB server or the HTTP server on a port like 80.
 In Kali Linux, all ports are set as unprivileged by default so it's probably not something you need to worry about.
 If this is not the case, my recommended solution is to make all ports unprivileged with `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=0`.
