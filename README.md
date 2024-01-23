@@ -25,7 +25,6 @@ git clone https://github.com/RedefiningReality/ohmykali ${ZSH_CUSTOM:-$HOME/.oh-
 Don't forget to edit the following lines at the beginning of `kali.plugin.zsh` to your liking:
 ```zsh
 work_dir="/home/$USER/shared/workspace" # default working directory
-scripts_dir="/home/$USER/shared/scripts" # default scripts directory
 scripts_windows="/home/$USER/shared/scripts/windows" # default Windows scripts directory
 scripts_linux="/home/$USER/shared/scripts/linux" # default Linux scripts directory
 ```
@@ -34,7 +33,8 @@ scripts_linux="/home/$USER/shared/scripts/linux" # default Linux scripts directo
 `box`, `rev`, `serve`, and `smb` have help screens you can access with the `-h` flag
 
 - `work` ⇒ cd to your default working directory
-- `scripts` ⇒ cd to your scripts directory
+- `win` ⇒ cd to your Windows scripts directory
+- `lin` ⇒ cd to your Linux scripts directory
 - `down` ⇒ move everything from your downloads folder to your current working directory
 - `vpn` ⇒ add VPN connection from OpenVPN (.ovpn) file to NetworkManager's list of VPN connections
   - allows you to connect through the UI rather than running the `openvpn` command
@@ -62,6 +62,18 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - `smb windows` ⇒ serve your Windows scripts directory via SMB with default share name "share"
 - `smb john` ⇒ serve your current working directory via SMB with share name "john"
 - `smb` ⇒ serve your current working directory via SMB with default share name "share"
+
+### Note on Root Privileges
+The `serve`, `smb`, and `rev` commands do *not* listen as root (no sudo) for the following reasons:
+- It's generally not a good idea to expose services running as root
+- Having to type in your sudo password is annoying
+However, you can't bind to privileged ports (usually <1024) without root privileges, which means you wouldn't be able to start the SMB server or the HTTP server on a port like 80.
+In Kali Linux, all ports are set as unprivileged by default so it's probably not something you need to worry about.
+If this is not the case, my recommended solution is to make all ports unprivileged with `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=0`.
+
+I could have chosen to integrate checking for unprivileged ports and applying sudo as necessary directly into my commands.
+I chose not to do this to avoid script overhead and also because it's more work for me for a feature I don't see anyone using.
+If it's a feature you'd like to see, feel free to submit an issue and complain about it, and I'll potentially add it.
 
 ## Other Plugins I Use
 *unrelated to this, but might be helpful*
