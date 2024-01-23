@@ -67,7 +67,7 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 
 ### Note on Root Privileges
 The `serve`, `smb`, and `rev` commands do *not* listen as root (no sudo) for the following reasons:
-- It's generally not a good idea to expose services running as root
+- It's generally not a good idea to expose services running as root when you can avoid it
 - Having to type in your sudo password is annoying
 
 However, you can't bind to privileged ports (usually <1024) without root privileges, which means on many distros you wouldn't be able to start the SMB server on port 443 or the HTTP server on a port like 80.
