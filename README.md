@@ -30,7 +30,7 @@ scripts_linux="/home/$USER/shared/scripts/linux" # default Linux scripts directo
 ```
 
 ### Commands
-`box`, `rev`, `serve`, and `smb` have help screens you can access with the `-h` flag
+`box`, `unbox`, `rev`, `serve`, and `smb` have help screens you can access with the `-h` flag
 
 - `work` ⇒ cd to your default working directory
 - `win` ⇒ cd to your Windows scripts directory
@@ -41,6 +41,7 @@ scripts_linux="/home/$USER/shared/scripts/linux" # default Linux scripts directo
 - `scan` ⇒ that one actually useful nmap service scan you run every time
   - check out the ohmyzsh bulit-in nmap plugin for more
 - `box` ⇒ add host (box) to /etc/hosts file and create environment variable so you can reference its IP by name
+- `unbox` ⇒ remove host (box) from /etc/hosts file and remove environment variable used to reference its IP by name
 - `rev` ⇒ rlwrapped netcat reverse listener with copy and pastables to get a full shell
 
 Be sure you're connected to a VPN (automatically detects IP) when using the following:
@@ -51,7 +52,8 @@ Be sure you're connected to a VPN (automatically detects IP) when using the foll
 - `vpn TryHackMe.ovpn` ⇒ add TryHackMe to your list of VPN connections
 - `scan -oN file 192.168.1.5` ⇒ scan 192.168.1.5, save output to file
 - `box academy 192.168.1.5` ⇒ add academy to /etc/hosts and create academy environment variable
-  - in the current terminal session, you can use `$academy` to directly reference academy's IP (192.168.1.5)
+  - in the current or new terminal sessions, you can use `$academy` to directly reference academy's IP (192.168.1.5)
+- `unbox academy` ⇒ remove academy from /etc/hosts and remove academy environment variable
 ---
 - `serve lin 8000` ⇒ serve your Linux scripts directory via HTTP on port 8000
 - `serve lin` ⇒ serve your Linux scripts directory via HTTP on default port 80
