@@ -14,8 +14,10 @@ alias scan="sudo nmap -T4 -p- -sC -sV -Pn -vv"
 box() {
   if (( $# != 2 )); then
     cat <<'EOF'
-Add box to /etc/hosts file
+Add box to /etc/hosts file and create environment variable that references its ip
 Usage: box [name] [ip]
+
+You'll be able to reference the ip in commands with $[name]
 EOF
     return
   fi
@@ -24,8 +26,31 @@ EOF
   echo Adding to /etc/hosts
   sudo sed -i "1s/^/$2\t$1\n/" /etc/hosts
   
+  # create environment variable
   echo Creating temporary environment variable
   export $1=$2
+  echo Adding environment variable to ~/.zshrc
+  echo "export $1=$2" >> ~/.zshrc
+}
+
+unbox() {
+if (( $# != 1 )) || [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
+    cat <<'EOF'
+Remove box from /etc/hosts file and remove environment variable that references its ip
+Usage: unbox [name]
+EOF
+    return
+  fi
+  
+  # remove from /etc/hosts
+  echo Removing from /etc/hosts
+  sudo sed -i "/$1/d" /etc/hosts
+  
+  # remove environment variable
+  echo Unsetting environment variable
+  unset $1
+  echo Removing environment variable from ~/.zshrc
+  sed -i "/^export $1=/d" ~/.zshrc
 }
 
 rev() {
