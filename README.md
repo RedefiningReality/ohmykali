@@ -70,8 +70,13 @@ The `serve`, `smb`, and `rev` commands do *not* listen as root (no sudo) for the
 
 However, you can't bind to privileged ports (usually <1024) without root privileges, which means you wouldn't be able to start the SMB server or the HTTP server on a port like 80.
 In Kali Linux, all ports are set as unprivileged by default so it's probably not something you need to worry about.
-If this is not the case, my recommended solution is to make all ports unprivileged with `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=0`.
+If this is not the case, my recommended solution is to make all ports unprivileged:
 
+```zsh
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=0
+```
+
+Perhaps that's not something you feel comfortable doing.
 I could have chosen to integrate checking for unprivileged ports and applying sudo as necessary directly into my commands.
 I chose not to do this to avoid script overhead and also because it's more work for me for a feature I don't see anyone using.
 If it's a feature you'd like to see, feel free to submit an issue and complain about it, and I'll potentially add it.
